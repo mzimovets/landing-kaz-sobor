@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Всё о таинстве Крещения
 
-## Getting Started
+Статический landing page о таинстве Крещения в православной традиции: возраст крещения, огласительные беседы, выбор крёстного, молитвы, необходимые вещи и первые шаги в церковной жизни. Собран на Next.js (App Router, статический экспорт) с оформлением в традиционном православном стиле.
 
-First, run the development server:
+## Скриншоты
+
+**Заглавный экран**
+
+![Заглавный экран](screenshots/desktop-hero.png)
+
+**Полная страница (десктоп)**
+
+![Полная страница на десктопе](screenshots/desktop-full.png)
+
+**Мобильная версия**
+
+<img src="screenshots/mobile-full.png" alt="Мобильная версия" width="360" />
+
+## Технологии
+
+- [Next.js](https://nextjs.org) (App Router, `output: "export"` — статический сайт)
+- TypeScript, Tailwind CSS
+- Шрифт [Monomakh](https://fonts.google.com/specimen/Monomakh) через `next/font/google`
+
+## Запуск локально
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Открыть [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Статическая сборка
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Собранный сайт появится в папке `out/` — его можно разместить на любом статическом хостинге.
 
-To learn more about Next.js, take a look at the following resources:
+## Заметки
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Изображения (`cover.png`, `katehezis.png`, `krestniy1-4.png`, `man-labor.png`, `woman-labor.png`, `baptise-kit.png`, `holy-comunion.png`, `orthodox-life.png`) пока не добавлены — на их месте временные плейсхолдеры с подписанными именами файлов. Чтобы подключить реальные изображения, положите их в `public/images/` и замените компоненты `ImagePlaceholder` в [`src/app/page.tsx`](src/app/page.tsx) на `next/image`.
