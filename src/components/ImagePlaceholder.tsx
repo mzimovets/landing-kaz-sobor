@@ -8,6 +8,7 @@ export default function ImagePlaceholder({
   label,
   className = "",
   ratio = "aspect-[4/3]",
+  src= ''
 }: Props) {
   return (
     <div
@@ -15,6 +16,8 @@ export default function ImagePlaceholder({
       role="img"
       aria-label={label}
     >
+      {src!== '' ? <img src={src}/>
+      :
       <svg
         width="32"
         height="32"
@@ -26,8 +29,8 @@ export default function ImagePlaceholder({
         <rect x="3" y="3" width="18" height="18" rx="1.5" />
         <circle cx="8.5" cy="8.5" r="1.5" />
         <path d="M21 15l-5-5-9 9" />
-      </svg>
-      <span className="text-xs tracking-wide opacity-70">{label}</span>
+      </svg>}
+      {/* <span className="text-xs tracking-wide opacity-70">{label}</span> */}
     </div>
   );
 }

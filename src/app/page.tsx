@@ -24,7 +24,7 @@ const catechesisReasons = [
   "Подготовить человека к участию в других таинствах, прежде всего Исповеди и Причащения.",
 ];
 
-const godparentImages = ["krestniy1.png", "krestniy2.png", "krestniy3.png", "krestniy4.png"];
+const godparentImages = ["krestniy1.jpg", "krestniy4.png"]; //"krestniy2.png", "krestniy3.png",
 
 const cannotBeGodparent = [
   "Некрещёный человек или представитель другой религии.",
@@ -88,27 +88,29 @@ export default function Home() {
         <div
           className="relative flex min-h-[70vh] flex-col items-center justify-center px-6 py-24 text-center"
           style={{
-            backgroundImage:
-              "linear-gradient(180deg, rgba(58,50,38,0.72), rgba(58,50,38,0.82)), repeating-linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 12px, transparent 12px, transparent 24px)",
+            backgroundImage: "url('cover.png')",
+            backgroundSize: '100% auto',
+            backgroundPosition: 'center center',
+              // "linear-gradient(180deg, rgba(58,50,38,0.72), rgba(58,50,38,0.82)), repeating-linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 12px, transparent 12px, transparent 24px)",
             backgroundColor: "#3a3226",
           }}
         >
-          <span
+          {/* <span
             className="mb-6 text-xs uppercase tracking-[0.35em] text-[#e8d9be]"
             aria-hidden="true"
           >
             cover.png
-          </span>
-          <CrossIcon className="h-10 w-10 text-accent mb-6" />
-          <h1 className="font-heading max-w-3xl text-3xl leading-tight text-[#fdfaf4] sm:text-5xl">
-            Всё о таинстве Крещения
+          </span> */}
+          {/* <CrossIcon className="h-10 w-10 text-accent mb-6" /> */}
+          <h1 className="font-heading max-w-4xl text-4xl leading-tight text-[#fdfaf4] sm:text-6xl">
+            О таинстве Крещения
           </h1>
           <div className="ornament my-6 text-accent" aria-hidden="true" />
           <blockquote className="quote-block max-w-2xl">
-            <span className="quote-mark">«</span>
+            {/* <span className="quote-mark">«</span> */}
             <p className="px-2">
-              Истинно говорю тебе, если кто не родится от воды и Духа, не может
-              войти в Царствие Божие
+              "Истинно говорю тебе, если кто не родится от воды и Духа, не может
+              войти в Царствие Божие"
             </p>
             <footer className="mt-4 text-sm tracking-wide text-accent">
               Евангелие от Иоанна (3:5)
@@ -160,7 +162,7 @@ export default function Home() {
             </p>
 
             <div className="mt-12 grid grid-cols-1 items-center gap-10 sm:grid-cols-2">
-              <ImagePlaceholder label="katehezis.png" ratio="aspect-[4/3]" />
+              <ImagePlaceholder label="katehezis.png" src="katehezis.png" ratio="aspect-[4/3]" />
               <div>
                 <h3 className="font-heading text-lg text-secondary">
                   Зачем нужны огласительные беседы?
@@ -232,12 +234,6 @@ export default function Home() {
             себя ответственность за духовное воспитание ребёнка.
           </p>
 
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {godparentImages.map((label) => (
-              <ImagePlaceholder key={label} label={label} ratio="aspect-square" />
-            ))}
-          </div>
-
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="relative rounded-sm border border-accent/30 bg-accent/5 p-8">
               <span className="absolute -top-4 -right-4 flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white shadow-sm">
@@ -273,7 +269,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-2">
+            {godparentImages.map((label) => (
+              <ImagePlaceholder key={label} label={label} src={label} ratio="aspect-square" />
+            ))}
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
               <h3 className="font-heading text-lg text-secondary">
                 Сколько крёстных нужно?
@@ -325,8 +327,8 @@ export default function Home() {
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <ImagePlaceholder label="man-labor.png" ratio="aspect-[4/3]" />
-              <ImagePlaceholder label="woman-labor.png" ratio="aspect-[4/3]" />
+              <ImagePlaceholder label="man-labor.png" src="man-labor.png" ratio="aspect-[4/3]" />
+              <ImagePlaceholder label="woman-labor.jpeg" src="woman-labor.jpeg" ratio="aspect-[4/3]" />
             </div>
 
             <div className="mt-14 grid grid-cols-1 items-start gap-10 sm:grid-cols-2">
@@ -368,7 +370,7 @@ export default function Home() {
           <SectionTitle title="Что нужно для крестин: список необходимых вещей" />
 
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-[minmax(0,320px)_1fr] sm:items-start">
-            <ImagePlaceholder label="baptise-kit.png" ratio="aspect-[3/4]" />
+            <ImagePlaceholder label="baptise-kit.png" src="baptise-kit.png" ratio="aspect-[3/4]" />
             <ul className="flex flex-col gap-4">
               {baptismKit.map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
@@ -403,7 +405,7 @@ export default function Home() {
                   получает благодатные силы для духовной жизни.
                 </p>
               </div>
-              <ImagePlaceholder label="holy-comunion.png" ratio="aspect-[4/5]" />
+              <ImagePlaceholder label="holy-comunion.jpg" src={'holy-comunion.jpg'} ratio="aspect-[4/5]" />
             </div>
           </div>
         </section>
@@ -412,7 +414,7 @@ export default function Home() {
         <section className="mx-auto max-w-5xl px-6 py-20">
           <SectionTitle title="С чего начинается православная жизнь?" />
           <div className="mt-10 grid grid-cols-1 items-center gap-10 sm:grid-cols-[minmax(0,340px)_1fr]">
-            <ImagePlaceholder label="orthodox-life.png" ratio="aspect-[4/5]" />
+            <ImagePlaceholder label="orthodox-life.png" src="orthodox-life.png" ratio="aspect-[4/5]" />
             <p className="leading-8 text-muted">
               Православная жизнь начинается с внутреннего поворота человека к
               Богу, который выражается в нескольких ключевых шагах. Это не
@@ -486,7 +488,7 @@ export default function Home() {
       <footer className="border-t border-accent/20 bg-white/60 py-10 text-center text-sm text-muted">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6">
           <CrossIcon className="h-5 w-5 text-secondary" />
-          <p>Всё о таинстве Крещения</p>
+          <p>О таинстве Крещения</p>
         </div>
       </footer>
     </div>
