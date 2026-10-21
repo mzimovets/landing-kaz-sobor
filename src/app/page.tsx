@@ -1,4 +1,5 @@
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import Navbar from "@/components/Navbar";
 import Ornament from "@/components/Ornament";
 import SectionTitle from "@/components/SectionTitle";
 import { CheckIcon, CrossIcon, XIcon } from "@/components/Icons";
@@ -83,6 +84,8 @@ const orthodoxLifeSteps = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+
       {/* ---------- Hero ---------- */}
       <header className="relative overflow-hidden">
         <div
@@ -119,7 +122,7 @@ export default function Home() {
 
       <main>
         {/* ---------- Возраст крещения ---------- */}
-        <section className="mx-auto max-w-5xl px-6 py-20">
+        <section id="vozrast" className="mx-auto max-w-5xl px-6 py-20 scroll-mt-20">
           <SectionTitle title="С какого возраста можно крестить?" />
           <p className="mx-auto mt-6 max-w-3xl text-center leading-8 text-muted">
             Возможность получить Божью благодать через крещение человеку
@@ -147,7 +150,7 @@ export default function Home() {
         </section>
 
         {/* ---------- Огласительные беседы ---------- */}
-        <section className="bg-white/60 py-20">
+        <section id="besedy" className="bg-white/60 py-20 scroll-mt-20">
           <div className="mx-auto max-w-5xl px-6">
             <SectionTitle title="Огласительные беседы перед Крещением" />
             <p className="mx-auto mt-6 max-w-3xl text-center leading-8 text-muted">
@@ -225,7 +228,7 @@ export default function Home() {
         </section>
 
         {/* ---------- Выбор крёстного ---------- */}
-        <section className="mx-auto max-w-5xl px-6 py-20">
+        <section id="krestny" className="mx-auto max-w-5xl px-6 py-20 scroll-mt-20">
           <SectionTitle title="Выбор крёстного" />
           <p className="mx-auto mt-6 max-w-3xl text-center leading-8 text-muted">
             Выбор крёстного родителя — это серьёзное решение, ведь он берёт на
@@ -364,7 +367,7 @@ export default function Home() {
         </section>
 
         {/* ---------- Что нужно для крестин ---------- */}
-        <section className="mx-auto max-w-5xl px-6 py-20">
+        <section id="veshi" className="mx-auto max-w-5xl px-6 py-20 scroll-mt-20">
           <SectionTitle title="Что нужно для крестин: список необходимых вещей" />
 
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-[minmax(0,320px)_1fr] sm:items-start">
