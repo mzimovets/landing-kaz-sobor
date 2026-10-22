@@ -94,11 +94,11 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
 
-        <div className="relative z-10 flex h-[85vh] max-w-2xl flex-col items-start justify-center px-6 text-left sm:px-12 md:h-screen md:px-20">
-          <h1 className="hero-text-shadow font-heading text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
+        <div className="relative z-10 flex h-[85vh] w-full flex-col px-6 pt-14 pb-16 sm:px-12 md:h-screen md:px-16 md:pt-24 md:pb-24">
+          <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
             О таинстве Крещения
           </h1>
-          <blockquote className="quote-block hero-text-shadow mt-6 max-w-xl text-left">
+          <blockquote className="quote-block hero-text-shadow mt-10 ml-auto max-w-xl text-right md:mt-14">
             <p>
               «Истинно говорю тебе, если кто не родится от воды и Духа, не может
               войти в Царствие Божие»
