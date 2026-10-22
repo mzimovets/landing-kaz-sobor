@@ -88,25 +88,23 @@ export default function Home() {
 
       {/* ---------- Hero ---------- */}
       <header className="relative overflow-hidden md:h-[150vh]">
-        <div className="relative flex h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#3a3226] px-6 text-center md:sticky md:top-0 md:h-screen">
+        <div className="relative flex h-[85vh] w-full flex-col items-start justify-center overflow-hidden bg-[#3a3226] px-6 text-left sm:px-12 md:sticky md:top-0 md:h-screen md:px-20">
           <div
             className="hero-image absolute inset-0 bg-[center_38%] bg-cover bg-no-repeat md:bg-fixed md:bg-center"
             style={{ backgroundImage: "url('/cover.png')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
 
-          <div className="relative z-10 flex flex-col items-center">
-            <CrossIcon className="mb-6 h-10 w-10 text-accent drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]" />
-            <h1 className="hero-text-shadow font-heading max-w-4xl text-4xl leading-tight text-[#fdfaf4] sm:text-6xl">
+          <div className="relative z-10 flex max-w-2xl flex-col items-start text-left">
+            <h1 className="hero-text-shadow font-heading text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
               О таинстве Крещения
             </h1>
-            <div className="ornament my-6 text-accent" aria-hidden="true" />
-            <blockquote className="quote-block hero-text-shadow max-w-2xl">
-              <p className="px-2">
+            <blockquote className="quote-block hero-text-shadow mt-6 max-w-xl text-left">
+              <p>
                 «Истинно говорю тебе, если кто не родится от воды и Духа, не может
                 войти в Царствие Божие»
               </p>
-              <footer className="mt-4 text-sm font-semibold tracking-wide text-[#d8ecf5]">
+              <footer className="mt-3 text-sm font-semibold tracking-wide text-[#d8ecf5]">
                 Евангелие от Иоанна (3:5)
               </footer>
             </blockquote>
