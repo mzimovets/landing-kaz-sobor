@@ -87,14 +87,14 @@ export default function Home() {
       <Navbar />
 
       {/* ---------- Hero ---------- */}
-      <header className="relative h-[85vh] overflow-hidden bg-[#3a3226] md:h-screen">
+      <header className="relative h-[calc(85vh_+_2rem)] overflow-hidden bg-[#3a3226] md:h-[calc(100vh_+_3rem)]">
         <div
           className="hero-image absolute inset-0 bg-[center_38%] bg-cover bg-no-repeat md:bg-fixed md:bg-center"
           style={{ backgroundImage: "url('/cover.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
 
-        <div className="relative z-10 flex h-full max-w-2xl flex-col items-start justify-center px-6 text-left sm:px-12 md:px-20">
+        <div className="relative z-10 flex h-[85vh] max-w-2xl flex-col items-start justify-center px-6 text-left sm:px-12 md:h-screen md:px-20">
           <h1 className="hero-text-shadow font-heading text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
             О таинстве Крещения
           </h1>
@@ -110,7 +110,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="relative z-10 rounded-t-[2rem] bg-background shadow-[0_-25px_50px_rgba(0,0,0,0.2)] md:rounded-t-[3rem]">
+      <main className="relative z-10 -mt-8 rounded-t-[2rem] bg-background shadow-[0_-25px_50px_rgba(0,0,0,0.2)] md:-mt-12 md:rounded-t-[3rem]">
         {/* ---------- Возраст крещения ---------- */}
         <section id="vozrast" className="mx-auto max-w-5xl px-6 py-20 scroll-mt-20">
           <SectionTitle title="С какого возраста можно крестить?" />
