@@ -98,7 +98,6 @@ h4,
 .quote-block {
   position: relative;
   font-family: var(--font-heading), serif;
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
   line-height: 1.6;
   color: #fdfaf4;
 }

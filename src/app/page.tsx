@@ -98,12 +98,12 @@ export default function Home() {
           <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
             О таинстве Крещения
           </h1>
-          <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-2xl text-right text-xl sm:text-2xl md:mt-36 md:text-3xl">
+          <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-3xl text-right text-2xl sm:text-3xl md:mt-36 md:text-4xl">
             <p>
               «Истинно говорю тебе, если кто не родится от воды и Духа, не может
               войти в Царствие Божие»
             </p>
-            <footer className="mt-4 text-base font-semibold tracking-wide text-[#d8ecf5]">
+            <footer className="mt-5 text-lg font-semibold tracking-wide text-[#d8ecf5]">
               Евангелие от Иоанна (3:5)
             </footer>
           </blockquote>
@@ -342,7 +342,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <blockquote className="quote-block rounded-sm bg-secondary/90 p-8 text-center text-[#fdfaf4]">
+              <blockquote className="quote-block rounded-sm bg-secondary/90 p-8 text-center text-lg text-[#fdfaf4] sm:text-xl">
                 <span className="quote-mark">«</span>
                 <p className="px-2">
                   Каждый уделяй по расположению сердца, не с огорчением и не с
@@ -465,7 +465,7 @@ export default function Home() {
             style={{ backgroundColor: "#3a3226" }}
           >
             <CrossIcon className="mx-auto h-8 w-8 text-accent" />
-            <blockquote className="quote-block mt-6">
+            <blockquote className="quote-block mt-6 text-lg sm:text-xl">
               <p>
                 Главная заповедь — любовь к Богу и к ближнему — становится
                 итогом и смыслом всего пути. Без любви все подвиги и знания
