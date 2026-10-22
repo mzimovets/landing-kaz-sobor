@@ -58,11 +58,9 @@ h4,
 @keyframes hero-focus-in {
   from {
     filter: blur(22px);
-    transform: scale(1.08);
   }
   to {
     filter: blur(0);
-    transform: scale(1);
   }
 }
 
