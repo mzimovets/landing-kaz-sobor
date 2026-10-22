@@ -1,4 +1,5 @@
 import ImagePlaceholder from "@/components/ImagePlaceholder";
+import HeroParallax from "@/components/HeroParallax";
 import Navbar from "@/components/Navbar";
 import Ornament from "@/components/Ornament";
 import SectionTitle from "@/components/SectionTitle";
@@ -87,28 +88,20 @@ export default function Home() {
       <Navbar />
 
       {/* ---------- Hero ---------- */}
-      <header className="relative h-[calc(85vh_+_2rem)] overflow-hidden bg-[#3a3226] md:h-[calc(100vh_+_3rem)]">
-        <div
-          className="hero-image absolute inset-0 bg-[center_38%] bg-cover bg-no-repeat md:bg-fixed md:bg-center"
-          style={{ backgroundImage: "url('/cover.png')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
-
-        <div className="relative z-10 flex h-[85vh] w-full flex-col px-6 pt-14 pb-16 sm:px-12 md:h-screen md:px-16 md:pt-24 md:pb-24">
-          <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
-            О таинстве Крещения
-          </h1>
-          <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-3xl text-right text-2xl sm:text-3xl md:mt-36 md:text-4xl">
-            <p>
-              «Истинно говорю тебе, если кто не родится от воды и Духа, не может
-              войти в Царствие Божие»
-            </p>
-            <footer className="mt-5 text-lg font-semibold tracking-wide text-[#d8ecf5]">
-              Евангелие от Иоанна (3:5)
-            </footer>
-          </blockquote>
-        </div>
-      </header>
+      <HeroParallax src="/cover.png">
+        <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
+          О таинстве Крещения
+        </h1>
+        <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-3xl text-right text-2xl sm:text-3xl md:mt-36 md:text-4xl">
+          <p>
+            «Истинно говорю тебе, если кто не родится от воды и Духа, не может
+            войти в Царствие Божие»
+          </p>
+          <footer className="mt-5 text-lg font-semibold tracking-wide text-[#d8ecf5]">
+            Евангелие от Иоанна (3:5)
+          </footer>
+        </blockquote>
+      </HeroParallax>
 
       <main className="relative z-10 -mt-8 rounded-t-[2rem] bg-background shadow-[0_-25px_50px_rgba(0,0,0,0.2)] md:-mt-12 md:rounded-t-[3rem]">
         {/* ---------- Возраст крещения ---------- */}
