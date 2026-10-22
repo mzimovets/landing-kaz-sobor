@@ -98,12 +98,12 @@ export default function Home() {
           <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
             О таинстве Крещения
           </h1>
-          <blockquote className="quote-block hero-text-shadow mt-10 ml-auto max-w-xl text-right md:mt-14">
+          <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-2xl text-right text-xl sm:text-2xl md:mt-36 md:text-3xl">
             <p>
               «Истинно говорю тебе, если кто не родится от воды и Духа, не может
               войти в Царствие Божие»
             </p>
-            <footer className="mt-3 text-sm font-semibold tracking-wide text-[#d8ecf5]">
+            <footer className="mt-4 text-base font-semibold tracking-wide text-[#d8ecf5]">
               Евангелие от Иоанна (3:5)
             </footer>
           </blockquote>
