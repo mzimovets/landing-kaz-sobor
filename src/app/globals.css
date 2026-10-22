@@ -46,13 +46,39 @@ h4,
   letter-spacing: 0.01em;
 }
 
+/* ---------- Hero ---------- */
+.hero-text-shadow {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55), 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.hero-image {
+  animation: hero-reveal 1.6s ease-out both;
+}
+
+@keyframes hero-reveal {
+  from {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image {
+    animation: none;
+  }
+}
+
 /* ---------- Ornamental divider ---------- */
 .ornament {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  color: var(--color-secondary);
+  color: var(--color-accent-dark);
   opacity: 0.85;
 }
 
@@ -127,14 +153,17 @@ h4,
   pointer-events: none;
 }
 
+.molitvoslov .drop-cap {
+  text-align: left;
+}
+
 .molitvoslov .drop-cap::first-letter {
   font-family: var(--font-heading), serif;
   font-size: 2.6em;
   color: var(--color-secondary);
   float: left;
   line-height: 0.8;
-  padding-right: 0.1em;
-  padding-top: 0.05em;
+  margin-right: 0.08em;
 }
 
 /* ---------- Placeholder image box ---------- */

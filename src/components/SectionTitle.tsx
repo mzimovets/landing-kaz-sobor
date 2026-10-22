@@ -19,7 +19,7 @@ export default function SectionTitle({
           {eyebrow}
         </span>
       )}
-      <h2 className="font-heading text-2xl sm:text-3xl text-secondary">{title}</h2>
+      <h2 className="font-heading text-2xl sm:text-3xl text-accent-dark">{title}</h2>
       <div className="ornament mt-3 w-28" aria-hidden="true" />
     </div>
   );

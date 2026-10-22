@@ -87,42 +87,34 @@ export default function Home() {
       <Navbar />
 
       {/* ---------- Hero ---------- */}
-      <header className="relative overflow-hidden">
-        <div
-          className="relative flex min-h-[70vh] flex-col items-center justify-center px-6 py-24 text-center"
-          style={{
-            backgroundImage: "url('cover.png')",
-            backgroundSize: '100% auto',
-            backgroundPosition: 'center center',
-              // "linear-gradient(180deg, rgba(58,50,38,0.72), rgba(58,50,38,0.82)), repeating-linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 12px, transparent 12px, transparent 24px)",
-            backgroundColor: "#3a3226",
-          }}
-        >
-          {/* <span
-            className="mb-6 text-xs uppercase tracking-[0.35em] text-[#e8d9be]"
-            aria-hidden="true"
-          >
-            cover.png
-          </span> */}
-          {/* <CrossIcon className="h-10 w-10 text-accent mb-6" /> */}
-          <h1 className="font-heading max-w-4xl text-4xl leading-tight text-[#fdfaf4] sm:text-6xl">
-            О таинстве Крещения
-          </h1>
-          <div className="ornament my-6 text-accent" aria-hidden="true" />
-          <blockquote className="quote-block max-w-2xl">
-            {/* <span className="quote-mark">«</span> */}
-            <p className="px-2">
-              "Истинно говорю тебе, если кто не родится от воды и Духа, не может
-              войти в Царствие Божие"
-            </p>
-            <footer className="mt-4 text-sm tracking-wide text-accent">
-              Евангелие от Иоанна (3:5)
-            </footer>
-          </blockquote>
+      <header className="relative overflow-hidden md:h-[150vh]">
+        <div className="relative flex h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#3a3226] px-6 text-center md:sticky md:top-0 md:h-screen">
+          <div
+            className="hero-image absolute inset-0 bg-[center_38%] bg-cover bg-no-repeat md:bg-fixed md:bg-center"
+            style={{ backgroundImage: "url('/cover.png')" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
+
+          <div className="relative z-10 flex flex-col items-center">
+            <CrossIcon className="mb-6 h-10 w-10 text-accent drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]" />
+            <h1 className="hero-text-shadow font-heading max-w-4xl text-4xl leading-tight text-[#fdfaf4] sm:text-6xl">
+              О таинстве Крещения
+            </h1>
+            <div className="ornament my-6 text-accent" aria-hidden="true" />
+            <blockquote className="quote-block hero-text-shadow max-w-2xl">
+              <p className="px-2">
+                «Истинно говорю тебе, если кто не родится от воды и Духа, не может
+                войти в Царствие Божие»
+              </p>
+              <footer className="mt-4 text-sm font-semibold tracking-wide text-[#d8ecf5]">
+                Евангелие от Иоанна (3:5)
+              </footer>
+            </blockquote>
+          </div>
         </div>
       </header>
 
-      <main>
+      <main className="relative z-10 rounded-t-[2rem] bg-background shadow-[0_-25px_50px_rgba(0,0,0,0.2)] md:rounded-t-[3rem]">
         {/* ---------- Возраст крещения ---------- */}
         <section id="vozrast" className="mx-auto max-w-5xl px-6 py-20 scroll-mt-20">
           <SectionTitle title="С какого возраста можно крестить?" />
@@ -133,7 +125,7 @@ export default function Home() {
             крестить практически в любом возрасте.
           </p>
 
-          <h3 className="font-heading mt-14 text-center text-lg text-secondary">
+          <h3 className="font-heading mt-14 text-center text-lg text-accent-dark">
             Основные моменты
           </h3>
 
@@ -144,7 +136,7 @@ export default function Home() {
                 className="flex flex-col gap-3 rounded-sm border border-accent/20 bg-white/60 p-6 shadow-sm"
               >
                 <CrossIcon className="h-6 w-6 text-accent" />
-                <h4 className="font-heading text-base text-secondary">{card.title}</h4>
+                <h4 className="font-heading text-base text-accent-dark">{card.title}</h4>
                 <p className="text-sm leading-relaxed text-muted">{card.text}</p>
               </div>
             ))}
@@ -167,7 +159,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 items-center gap-10 sm:grid-cols-2">
               <ImagePlaceholder label="katehezis.png" src="katehezis.png" ratio="aspect-[4/3]" />
               <div>
-                <h3 className="font-heading text-lg text-secondary">
+                <h3 className="font-heading text-lg text-accent-dark">
                   Зачем нужны огласительные беседы?
                 </h3>
                 <ul className="mt-4 flex flex-col gap-3">
@@ -186,11 +178,11 @@ export default function Home() {
               <SectionTitle title="Молитвы на Крещение" align="center" />
               <div className="molitvoslov mx-auto mt-8 max-w-3xl rounded-sm p-8 sm:p-12">
                 <div className="mb-10">
-                  <h4 className="font-heading text-center text-base text-secondary">
+                  <h4 className="font-heading text-center text-base text-accent-dark">
                     Молитва Господня
                   </h4>
                   <Ornament className="w-16" />
-                  <p className="drop-cap text-center italic leading-8 text-foreground">
+                  <p className="drop-cap text-left italic leading-8 text-foreground">
                     Отче наш, Иже еси на небесех! Да святится имя Твое. да
                     приидет Царствие Твое, да будет воля Твоя, яко на небеси и
                     на земли. Хлеб наш насущный даждь нам днесь; и остави нам
@@ -200,11 +192,11 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h4 className="font-heading text-center text-base text-secondary">
+                  <h4 className="font-heading text-center text-base text-accent-dark">
                     Символ веры
                   </h4>
                   <Ornament className="w-16" />
-                  <p className="drop-cap text-center italic leading-8 text-foreground">
+                  <p className="drop-cap text-left italic leading-8 text-foreground">
                     Верую во единаго Бога Отца, Вседержителя, Творца Небу и
                     земли, видимым же всем и невидимым. И во единаго Господа
                     Иисуса Христа, Сына Божия, Единороднаго, Иже от Отца
@@ -258,7 +250,7 @@ export default function Home() {
               <span className="absolute -top-4 -right-4 flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-white shadow-sm">
                 <XIcon className="h-5 w-5" />
               </span>
-              <h3 className="font-heading text-lg text-secondary">
+              <h3 className="font-heading text-lg text-accent-dark">
                 Крёстным не может быть:
               </h3>
               <ul className="mt-4 flex flex-col gap-2">
@@ -280,7 +272,7 @@ export default function Home() {
 
           <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
-              <h3 className="font-heading text-lg text-secondary">
+              <h3 className="font-heading text-lg text-accent-dark">
                 Сколько крёстных нужно?
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -291,7 +283,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="font-heading text-lg text-secondary">
+              <h3 className="font-heading text-lg text-accent-dark">
                 С какого возраста не нужен крёстный?
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -304,7 +296,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14">
-            <h3 className="font-heading text-center text-lg text-secondary">
+            <h3 className="font-heading text-center text-lg text-accent-dark">
               Как выбрать подходящего кандидата?
             </h3>
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -336,7 +328,7 @@ export default function Home() {
 
             <div className="mt-14 grid grid-cols-1 items-start gap-10 sm:grid-cols-2">
               <div>
-                <h3 className="font-heading text-lg text-secondary">
+                <h3 className="font-heading text-lg text-accent-dark">
                   Пожертвования как выражение благодарности
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -461,7 +453,7 @@ export default function Home() {
                     {i + 1}
                   </span>
                   <div>
-                    <h4 className="font-heading text-base text-secondary">{step.title}</h4>
+                    <h4 className="font-heading text-base text-accent-dark">{step.title}</h4>
                     <p className="mt-1 text-sm leading-relaxed text-muted">{step.text}</p>
                   </div>
                 </div>
