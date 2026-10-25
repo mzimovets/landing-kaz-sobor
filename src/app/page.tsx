@@ -26,7 +26,7 @@ const catechesisReasons = [
   "Подготовить человека к участию в других таинствах, прежде всего Исповеди и Причащения.",
 ];
 
-const godparentImages = ["krestniy1.jpg", "krestniy4.png"]; //"krestniy2.png", "krestniy3.png",
+const godparentImages = ["krestniy1.jpg"]; //"krestniy2.png", "krestniy3.png", , "krestniy4.png"
 
 const cannotBeGodparent = [
   "Некрещёный человек или представитель другой религии.",
@@ -253,13 +253,42 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-2">
+ <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
+   <div className="relative rounded-sm">
+   <ImagePlaceholder key={godparentImages[0]} label={godparentImages[0]} src={godparentImages[0]} ratio="aspect-square" />
+   </div>
+   <div className="relative rounded-sm">
+   <div>
+              <h3 className="font-heading text-lg text-accent-dark">
+                Сколько крёстных нужно?
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                По церковным канонам достаточно одного восприемника того же
+                пола, что и ребёнок: для мальчика — мужчина, для девочки —
+                женщина. Наличие двух крёстных (мужчины и женщины) — это
+                благочестивая традиция, а не жёсткое правило.
+              </p>
+            </div>
+            <div>
+              <h3 className="mt-16 font-heading text-lg text-accent-dark">
+                С какого возраста не нужен крёстный?
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                Согласно документу «О религиозно-образовательном и
+                катехизическом служении в Русской Православной Церкви»
+                обязательное наличие крёстного предполагается только для
+                детей до 7-ми лет.
+              </p>
+            </div>
+   </div>
+ </div>
+          {/* <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-2">
             {godparentImages.map((label) => (
               <ImagePlaceholder key={label} label={label} src={label} ratio="aspect-square" />
             ))}
-          </div>
+          </div> */}
 
-          <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2">
+          {/* <div className="mt-6 grid grid-cols-1 gap-10 sm:grid-cols-2">
             <div>
               <h3 className="font-heading text-lg text-accent-dark">
                 Сколько крёстных нужно?
@@ -282,7 +311,7 @@ export default function Home() {
                 детей до 7-ми лет.
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-14">
             <h3 className="font-heading text-center text-lg text-accent-dark">
@@ -335,7 +364,8 @@ export default function Home() {
                 </p>
               </div>
 
-              <blockquote className="quote-block rounded-sm bg-secondary/90 p-8 text-center text-lg text-[#fdfaf4] sm:text-xl">
+              <blockquote className="quote-block rounded-sm bg-secondary/90 p-8 text-center text-lg text-[#fdfaf4] sm:text-xl"
+              style={{ backgroundImage: `url('red-bg.png')`, backgroundPosition: `center center` }}>
                 <span className="quote-mark">«</span>
                 <p className="px-2">
                   Каждый уделяй по расположению сердца, не с огорчением и не с
@@ -455,7 +485,7 @@ export default function Home() {
         <section className="px-6 pb-24">
           <div
             className="mx-auto max-w-4xl rounded-sm px-8 py-16 text-center sm:px-16"
-            style={{ backgroundColor: "#3a3226" }}
+            style={{ backgroundImage: `url('blue-bg.png')`, backgroundPosition: `center center` }}
           >
             <CrossIcon className="mx-auto h-8 w-8 text-accent" />
             <blockquote className="quote-block mt-6 text-lg sm:text-xl">
@@ -471,7 +501,7 @@ export default function Home() {
 
       <footer className="border-t border-accent/20 bg-white/60 py-10 text-center text-sm text-muted">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6">
-          <CrossIcon className="h-5 w-5 text-secondary" />
+          {/* <CrossIcon className="h-5 w-5 text-secondary" /> */}
           <p>О таинстве Крещения</p>
         </div>
       </footer>
