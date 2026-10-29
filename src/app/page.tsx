@@ -88,7 +88,7 @@ export default function Home() {
       <Navbar />
 
       {/* ---------- Hero ---------- */}
-      <HeroParallax src="/cover.png" startY={38} endY={90}>
+      <HeroParallax src="cover.png" startY={38} endY={90}>
         <h1 className="hero-text-shadow font-heading mx-auto max-w-3xl text-center text-3xl leading-tight text-[#fdfaf4] sm:text-5xl md:text-6xl">
           О таинстве Крещения
         </h1>
