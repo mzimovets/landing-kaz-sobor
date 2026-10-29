@@ -51,10 +51,10 @@ export default function HeroParallax({ src, startY = 38, endY = 90, children }: 
   }, [startY, endY]);
 
   return (
-    <div ref={wrapperRef} className="relative h-[200vh]">
+    <div ref={wrapperRef} className="relative md:h-[200vh]">
       <div
         ref={frameRef}
-        className="sticky top-0 h-[calc(100vh_+_2rem)] w-full overflow-hidden bg-[#3a3226] md:h-[calc(100vh_+_3rem)]"
+        className="h-[calc(85vh_+_2rem)] w-full overflow-hidden bg-[#3a3226] md:sticky md:top-0 md:h-[calc(100vh_+_3rem)]"
       >
         <div
           ref={imageRef}
