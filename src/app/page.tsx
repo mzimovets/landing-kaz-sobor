@@ -94,9 +94,9 @@ export default function Home() {
         </h1>
         <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-3xl text-right text-2xl sm:text-3xl md:mt-36 md:text-4xl">
           <p>
-            «Кто будет веровать и креститься, спасён будет»
+            «Кто будет веровать и креститься, спасён будет…»
           </p>
-          <footer className="mt-5 text-lg font-semibold tracking-wide text-[#d8ecf5]">
+          <footer className="mt-2 text-lg font-semibold tracking-wide text-[#d8ecf5]">
             Евангелие от Марка (16:16)
           </footer>
         </blockquote>
