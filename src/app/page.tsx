@@ -3,7 +3,7 @@ import HeroParallax from "@/components/HeroParallax";
 import Navbar from "@/components/Navbar";
 import Ornament from "@/components/Ornament";
 import SectionTitle from "@/components/SectionTitle";
-import { CheckIcon, CrossIcon, XIcon } from "@/components/Icons";
+import { CheckIcon, QuoteIcon, XIcon } from "@/components/Icons";
 
 const ageCards = [
   {
@@ -93,9 +93,7 @@ export default function Home() {
           О таинстве Крещения
         </h1>
         <blockquote className="quote-block hero-text-shadow mt-24 ml-auto max-w-3xl text-right text-2xl sm:text-3xl md:mt-36 md:text-4xl">
-          <p>
-            «Кто будет веровать и креститься, спасён будет…»
-          </p>
+          <p>«Кто будет веровать и креститься, спасён будет…»</p>
           <footer className="mt-2 text-lg font-semibold tracking-wide text-[#d8ecf5]">
             Евангелие от Марка (16:16)
           </footer>
@@ -123,7 +121,6 @@ export default function Home() {
                 key={card.title}
                 className="flex flex-col gap-3 rounded-sm border border-accent/20 bg-white/60 p-6 shadow-sm"
               >
-                <CrossIcon className="h-6 w-6 text-accent" />
                 <h4 className="font-heading text-base text-accent-dark">{card.title}</h4>
                 <p className="text-sm leading-relaxed text-muted">{card.text}</p>
               </div>
@@ -152,9 +149,8 @@ export default function Home() {
                 </h3>
                 <ul className="mt-4 flex flex-col gap-3">
                   {catechesisReasons.map((reason) => (
-                    <li key={reason} className="flex gap-3 text-sm leading-relaxed text-muted">
-                      <CrossIcon className="mt-1 h-4 w-4 shrink-0 text-accent" />
-                      <span>{reason}</span>
+                    <li key={reason} className="text-sm leading-relaxed text-muted">
+                      {reason}
                     </li>
                   ))}
                 </ul>
@@ -365,7 +361,7 @@ export default function Home() {
 
               <blockquote className="quote-block rounded-sm bg-secondary/90 p-8 text-center text-lg text-[#fdfaf4] sm:text-xl"
               style={{ backgroundImage: `url('red-bg.png')`, backgroundPosition: `center center` }}>
-                <span className="quote-mark">«</span>
+                <QuoteIcon className="quote-mark" style={{ color: "#fdfaf4" }} />
                 <p className="px-2">
                   Каждый уделяй по расположению сердца, не с огорчением и не с
                   принуждением; ибо доброхотно дающего любит Бог
@@ -386,9 +382,8 @@ export default function Home() {
             <ImagePlaceholder label="baptise-kit.png" src="baptise-kit.png" ratio="aspect-[3/4]" />
             <ul className="flex flex-col gap-4">
               {baptismKit.map((item) => (
-                <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
-                  <CrossIcon className="mt-1 h-4 w-4 shrink-0 text-accent" />
-                  <span>{item}</span>
+                <li key={item} className="text-sm leading-relaxed text-muted">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -455,7 +450,7 @@ export default function Home() {
 
           <div className="mt-14">
             <blockquote className="quote-block-light mx-auto max-w-2xl text-center">
-              <span className="quote-mark">«</span>
+              <QuoteIcon className="quote-mark" />
               <p className="px-2">
                 Где двое или трое собраны во имя Моё, там Я посреди них
               </p>
@@ -486,7 +481,7 @@ export default function Home() {
             className="mx-auto max-w-4xl rounded-sm px-8 py-16 text-center sm:px-16"
             style={{ backgroundImage: `url('blue-bg.png')`, backgroundPosition: `center center` }}
           >
-            <CrossIcon className="mx-auto h-8 w-8 text-accent" />
+            <QuoteIcon className="mx-auto h-8 w-8 text-accent" />
             <blockquote className="quote-block mt-6 text-lg sm:text-xl">
               <p>
                 Главная заповедь — любовь к Богу и к ближнему — становится
@@ -500,7 +495,6 @@ export default function Home() {
 
       <footer className="border-t border-accent/20 bg-white/60 py-10 text-center text-sm text-muted">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6">
-          {/* <CrossIcon className="h-5 w-5 text-secondary" /> */}
           <p>О таинстве Крещения</p>
         </div>
       </footer>

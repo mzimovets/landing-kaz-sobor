@@ -62,7 +62,7 @@ export default function HeroParallax({ src, startY = 38, endY = 90, children }: 
           style={{ backgroundImage: `url('${src}')`, backgroundPosition: `center ${startY}%` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/60" />
-        <div className="relative z-10 flex h-[85vh] w-full flex-col px-6 pt-14 pb-16 sm:px-12 md:h-screen md:px-16 md:pt-24 md:pb-24">
+        <div className="relative z-10 flex h-[85vh] w-full flex-col px-6 pt-28 pb-16 sm:px-12 md:h-screen md:px-16 md:pt-24 md:pb-24">
           {children}
         </div>
       </div>
